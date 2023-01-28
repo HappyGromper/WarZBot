@@ -22,10 +22,10 @@ function checkServer(serverIP, message) {
         if (!error && response.statusCode === 200) {
             const serverData = JSON.parse(body);
             message.channel.send("Server " + serverIP + " has " + serverData.players.online + " players online.");
-            return serverData.players.online;
+            // return serverData.players.online;
         } else {
             message.channel.send("Error retrieving server data for server " + serverIP + ".");
-            return 'Error retrieving server data';
+            // return 'Error retrieving server data';
         }
     });
 }
