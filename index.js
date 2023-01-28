@@ -8,9 +8,6 @@ client.on("ready", () => {
 });
 
 client.on("messageCreate", message => {
-    // if(message.channel.type == "dm"  ) {
-    //     message.author.send("Hello!");
-    // }
 
     if (message.content === "!wz") {
         checkServer("1.mc-warz.com", message);
