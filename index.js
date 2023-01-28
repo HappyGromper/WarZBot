@@ -12,7 +12,7 @@ client.on("messageCreate", message => {
         message.author.send("Hello!");
     }
 
-    if (message.content === "!pc") {
+    if (message.content === "!wz") {
         checkServer("1.mc-warz.com", message);
         checkServer("2.mc-warz.com", message);
         checkServer("3.mc-warz.com", message);
@@ -32,6 +32,5 @@ function checkServer(serverIP, message) {
         }
     });
 }
-
 
 client.login(process.env.TOKEN);
