@@ -19,7 +19,7 @@ client.on("messageCreate", message => {
 
 function checkServer(serverIP, message) {
     request(`https://api.mcsrvstat.us/2/${serverIP}`, function(error, response, body) {
-        if (!error && response.statusCode === 200) {
+        if (!error) {
             const serverData = JSON.parse(body);
             message.channel.send("Server " + serverIP + " has " + serverData.players.online + " players online.");
             // return serverData.players.online;
