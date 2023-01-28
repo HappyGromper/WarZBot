@@ -3,12 +3,9 @@ require("dotenv/config")
 const request = require("request");
 const client = new Client({intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent]});
 
-
-
 client.on("ready", () => {
     console.log("Bot is ready.");
 });
-
 
 client.on("messageCreate", message => {
     if(message.channel.type == "dm"  ) {
@@ -19,10 +16,8 @@ client.on("messageCreate", message => {
         checkServer("1.mc-warz.com", message);
         checkServer("2.mc-warz.com", message);
         checkServer("3.mc-warz.com", message);
-        checkServer("4.mc-warz.com", message);
-        
-    }
-    
+        checkServer("4.mc-warz.com", message);   
+    }  
 });
 
 function checkServer(serverIP, message) {
